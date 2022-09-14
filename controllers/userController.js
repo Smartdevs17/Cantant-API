@@ -15,7 +15,7 @@ const CreateUser = async(req,res) => {
                     data: message
                 })
             }else{
-                res.status(422).json({
+                res.status(400).json({
                     success,message,error
                 })
             }
@@ -48,7 +48,7 @@ const GetUser = async(req,res) => {
                     data: message
                 })
             }else{
-                res.status(422).json({
+                res.status(404).json({
                     success,message,error
                 })
             }
@@ -106,7 +106,7 @@ const UpdateUser = async(req,res) => {
                     data: message
                 })
             }else{
-                res.status(422).json({
+                res.status(404).json({
                     success,message,error
                 })
             }
@@ -138,7 +138,7 @@ const DeleteUser = async(req,res) => {
                     message
                 })
             }else{
-                res.status(422).json({
+                res.status(404).json({
                     success,message,error
                 })
             }

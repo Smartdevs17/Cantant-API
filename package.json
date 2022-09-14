@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "test": "export NODE_ENV=test || SET \"NODE_ENV=test\" && mocha **/*.test.js ",
+    "test-watch": "nodemon --exec \"npm test\""
   },
   "keywords": [],
   "author": "",
@@ -21,5 +23,10 @@
     "mongoose": "^6.6.0",
     "morgan": "^1.10.0",
     "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "expect": "^29.0.3",
+    "mocha": "^10.0.0",
+    "supertest": "^6.2.4"
   }
 }
